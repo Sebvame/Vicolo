@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>VICOLO | Mobiliario Personalizado en Costa Rica</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#353535",
+                        "tertiary-fixed": "#ffdbce",
+                        "on-tertiary-fixed": "#2b160f",
+                        "on-secondary-fixed": "#111d23",
+                        "on-surface": "#e5e2e1",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0e0e0e",
+                        "secondary-container": "#3f4b51",
+                        "tertiary": "#e4beb2",
+                        "outline": "#8e9192",
+                        "inverse-on-surface": "#313030",
+                        "on-error": "#690005",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-bright": "#393939",
+                        "on-primary-fixed-variant": "#5d4213",
+                        "primary": "#e8c086",
+                        "primary-container": "#3e2800",
+                        "surface-variant": "#353535",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#e5e2e1",
+                        "on-surface-variant": "#c4c7c7",
+                        "on-secondary": "#263238",
+                        "tertiary-container": "#3e271e",
+                        "surface-container-low": "#1c1b1b",
+                        "on-error-container": "#ffdad6",
+                        "background": "#131313",
+                        "surface-dim": "#131313",
+                        "on-background": "#e5e2e1",
+                        "secondary-fixed-dim": "#bcc8d0",
+                        "on-secondary-fixed-variant": "#3d484f",
+                        "on-tertiary": "#422b22",
+                        "on-secondary-container": "#aebac2",
+                        "surface-container": "#20201f",
+                        "secondary-fixed": "#d8e4ec",
+                        "primary-fixed": "#ffdeae",
+                        "primary-fixed-dim": "#e8c086",
+                        "secondary": "#bcc8d0",
+                        "on-primary": "#432c00",
+                        "outline-variant": "#444748",
+                        "on-tertiary-fixed-variant": "#5b4137",
+                        "on-primary-fixed": "#281800",
+                        "on-primary-container": "#b18e58",
+                        "surface-tint": "#e8c086",
+                        "tertiary-fixed-dim": "#e4beb2",
+                        "inverse-primary": "#775928",
+                        "on-tertiary-container": "#ae8c80",
+                        "surface": "#131313"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk", "sans-serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Space Grotesk", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+    vertical-align: middle
+    }
+.mask-blueprint {
+    background-image: radial-gradient(rgba(232, 192, 134, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px
+    }
+.grain-texture {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuC6t9wMfsecjA0ZSMrOVl9pvwNrsLjfwM5_1GGAN9zerEYFM-0KllDdbypiOzCXB2RLSAjPhgfybFGGlK0JD56DifeJV8tM3ysBqy1F5qFicMhcrgaqQ4nb-wQsqdL6cfIk24CYANxou1_IrRMSkVkKbtYYcwob8QgR8FaEs4Xt_1VsbauUaK6yveVSZsIgfHB7XakYgSR_ljL3y5zZKi2nqYSb3dlBbZT5h6wSSK0Z3EJB5jcyf3kH5sJ4fhBhq5f_sxst7S14VYY);
+    opacity: 0.03
+    }
+::-webkit-scrollbar {
+    width: 6px
+    }
+::-webkit-scrollbar-track {
+    background: #131313
+    }
+::-webkit-scrollbar-thumb {
+    background: #353535
+    }</style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<nav class="fixed top-0 z-50 w-full bg-[#131313]/80 backdrop-blur-2xl border-b border-[#353535]/20 flex justify-between items-center px-6 md:px-10 py-6">
+<div class="text-2xl font-bold tracking-tighter text-[#e8c086] font-['Space_Grotesk']">VICOLO</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="text-stone-400 font-['Space_Grotesk'] tracking-[0.2em] uppercase text-xs font-bold hover:text-[#e8c086] transition-colors duration-300" href="#proyectos">Ver proyectos</a>
+<a class="bg-primary text-on-primary px-6 py-2 font-['Space_Grotesk'] tracking-[0.2em] uppercase text-xs font-bold hover:bg-on-primary-container transition-all duration-300" href="https://wa.me/vicolo">WhatsApp</a>
+</div>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- SideNavBar (Desktop Only) -->
+<aside class="hidden lg:flex flex-col h-screen w-72 fixed left-0 top-0 border-r border-[#353535]/30 bg-[#131313] z-40 pt-32">
+<div class="px-8 mb-12">
+<h2 class="text-xl font-black text-[#e8c086] font-['Space_Grotesk']">VICOLO</h2>
+<p class="font-['Space_Grotesk'] uppercase text-[10px] tracking-widest font-semibold text-stone-500">ESTUDIO DE DISEÑO</p>
+</div>
+<nav class="flex flex-col">
+<a class="bg-[#20201f] text-[#e8c086] border-l-4 border-[#e8c086] py-5 px-8 font-['Space_Grotesk'] uppercase text-[11px] tracking-widest font-semibold flex items-center gap-4" href="#">
+<span class="material-symbols-outlined text-lg">home</span> Inicio
+            </a>
+<a class="text-stone-500 py-5 px-8 border-l-4 border-transparent hover:bg-[#20201f] hover:text-stone-200 transition-all duration-200 font-['Space_Grotesk'] uppercase text-[11px] tracking-widest font-semibold flex items-center gap-4" href="#marca">
+<span class="material-symbols-outlined text-lg">verified</span> Marca
+            </a>
+<a class="text-stone-500 py-5 px-8 border-l-4 border-transparent hover:bg-[#20201f] hover:text-stone-200 transition-all duration-200 font-['Space_Grotesk'] uppercase text-[11px] tracking-widest font-semibold flex items-center gap-4" href="#proceso">
+<span class="material-symbols-outlined text-lg">architecture</span> Proceso
+            </a>
+<a class="text-stone-500 py-5 px-8 border-l-4 border-transparent hover:bg-[#20201f] hover:text-stone-200 transition-all duration-200 font-['Space_Grotesk'] uppercase text-[11px] tracking-widest font-semibold flex items-center gap-4" href="#servicios">
+<span class="material-symbols-outlined text-lg">handyman</span> Servicios
+            </a>
+<a class="text-stone-500 py-5 px-8 border-l-4 border-transparent hover:bg-[#20201f] hover:text-stone-200 transition-all duration-200 font-['Space_Grotesk'] uppercase text-[11px] tracking-widest font-semibold flex items-center gap-4" href="#proyectos">
+<span class="material-symbols-outlined text-lg">grid_view</span> Proyectos
+            </a>
+<a class="text-stone-500 py-5 px-8 border-l-4 border-transparent hover:bg-[#20201f] hover:text-stone-200 transition-all duration-200 font-['Space_Grotesk'] uppercase text-[11px] tracking-widest font-semibold flex items-center gap-4" href="#faq">
+<span class="material-symbols-outlined text-lg">quiz</span> Preguntas
+            </a>
+</nav>
+</aside>
+<main class="lg:pl-72">
+<!-- Section 1: Hero -->
+<section class="relative min-h-screen flex items-center px-6 md:px-20 overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 mask-blueprint pointer-events-none opacity-40"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
+<div class="relative z-20 max-w-4xl">
+<div class="mb-6 flex items-center gap-4">
+<span class="h-px w-12 bg-primary"></span>
+<span class="font-headline uppercase tracking-[0.3em] text-primary text-xs font-bold">ESTUDIO DE EBANISTERÍA MODERNA</span>
+</div>
+<h1 class="text-5xl md:text-8xl font-headline font-bold text-on-surface leading-[0.9] tracking-tighter mb-8">
+                    Diseño <br/> <span class="text-primary italic font-light">personalizado</span> <br/> en Costa Rica
+                </h1>
+<p class="text-stone-400 text-lg md:text-xl max-w-xl mb-12 leading-relaxed">
+                    Creamos mobiliario exclusivo que transforma casas, oficinas y Airbnbs en espacios con alma arquitectónica. Ingeniería y estética en cada ensamble.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<a class="bg-primary text-on-primary px-10 py-5 font-headline font-bold uppercase tracking-widest text-sm hover:bg-on-primary-container transition-all text-center" href="#">
+                        Hablemos por WhatsApp
+                    </a>
+<a class="border border-outline-variant text-on-surface px-10 py-5 font-headline font-bold uppercase tracking-widest text-sm hover:bg-surface-container-highest transition-all text-center" href="#">
+                        Ver proyectos
+                    </a>
+</div>
+</div>
+<!-- Hero Image Background Mockup -->
+<div class="absolute right-0 top-0 h-full w-1/2 hidden lg:block">
+<img class="h-full w-full object-cover grayscale opacity-60 hover:grayscale-0 transition-all duration-700" data-alt="luxury minimalist kitchen with dark wood cabinets and white marble island in a sunlit open-concept house" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLqMuTzHgsYE_khyC_NX_09dN-1Xs_1-ZBJqI9IlZvHW9XBZL8ePS8z2v8-ow3XWWiPl8QeoSE8envkOf36GHroPlN3m892EDinZwLmPQfdK2drOA63owImcPqx-1RFa0bV-9NCQdIlpR604dV0LxGBt9B35fZQXVRcthwbq38QdkMoEH_56EmWDXsO8QWD-059SR8dG3AjdYZOm3PP2_XCyucwd7KvfIqUxjw5pmd2IWIQIYfR-6pPa3qG4E70NnKrwZRDMzzagI"/>
+</div>
+</section>
+<!-- Section 2: Intro -->
+<section class="py-32 px-6 md:px-20 bg-surface" id="marca">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-container-highest">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="artisanal wood workshop with high-end tools and custom furniture pieces under soft industrial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARotDluAuroOp3WEGi5z_2-AdLQQmXWyYFNbRRHm0llaoUbSG7ZYIkShVwv4KXNcR26bTDJ6sEF8BretR4VUM3X8pdIQaYcsyMDLoCnFFU6CrC5yEUdNR5WQB3OkgW4bvH82Eii03SP1wpldCH4Q6JHa6UyzYG3lSs0mvQ79p9FqxO1hbCE2oqiyKfW_tBFySNOaPPKWvJOiEfmbLPa1XhVwRYTWZonAzHeS27GHU4rzwd3EoFeltLpYh8XEPeHFhi8eM_xoGNbJ0"/>
+</div>
+<!-- Spec-Box Component -->
+<div class="absolute -bottom-10 -right-10 bg-surface-container-highest p-8 max-w-xs shadow-2xl">
+<div class="h-10 w-1 bg-primary absolute left-0 top-1/2 -translate-y-1/2"></div>
+<p class="font-headline text-xs tracking-widest uppercase font-bold text-primary mb-2">ESPECIFICACIÓN VICOLO</p>
+<p class="text-stone-300 text-sm leading-relaxed italic">"No vendemos catálogos, ejecutamos visiones arquitectónicas únicas."</p>
+</div>
+</div>
+<div class="md:col-span-7">
+<h2 class="font-headline text-xs tracking-[0.4em] uppercase text-stone-500 mb-8">NUESTRO MANIFIESTO</h2>
+<h3 class="text-4xl md:text-6xl font-headline font-bold mb-10 leading-tight">Para espacios <br/><span class="text-primary tracking-tighter">VICOLO</span>.</h3>
+<p class="text-stone-400 text-lg leading-relaxed mb-8">
+                        VICOLO nace de la necesidad de elevar el estándar del mobiliario en Costa Rica. No creemos en lo genérico. Cada pieza es un proceso de ingeniería inversa, donde las necesidades del usuario dictan la forma y los materiales dictan la estructura.
+                    </p>
+<p class="text-stone-400 text-lg leading-relaxed">
+                        Desde nuestra fundación, nos hemos especializado en proyectos "turn-key" donde la precisión de cada milímetro garantiza un ensamble perfecto en el sitio final.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Section 3: Statistics -->
+<section class="bg-surface-container-low border-y border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-outline-variant/10">
+<div class="p-16 flex flex-col items-center text-center">
+<span class="font-headline text-5xl font-bold text-primary mb-4">920+</span>
+<span class="font-headline uppercase text-xs tracking-widest text-stone-500">Espacios transformados</span>
+</div>
+<div class="p-16 flex flex-col items-center text-center">
+<span class="font-headline text-5xl font-bold text-primary mb-4">20K+</span>
+<span class="font-headline uppercase text-xs tracking-widest text-stone-500">Horas de diseño aplicadas</span>
+</div>
+<div class="p-16 flex flex-col items-center text-center">
+<span class="font-headline text-5xl font-bold text-primary mb-4">90%</span>
+<span class="font-headline uppercase text-xs tracking-widest text-stone-500">Recomendaciones orgánicas</span>
+</div>
+</div>
+</section>
+<!-- Section 4: Founder Section -->
+<section class="py-32 px-6 md:px-20 bg-surface">
+<div class="bg-surface-container border border-outline-variant/10 p-12 md:p-24 flex flex-col md:flex-row items-center gap-16">
+<div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 grayscale">
+<img class="w-full h-full object-cover" data-alt="professional portrait of a creative director in a minimalist studio setting with architectural sketches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB15T4GUgaL44_5z_NwQhXFG3FUPBjIB4zZQYK8H34M5JWtw2RmvNhqwp9Gk8faQxcHx9Fvib-NPfOmRDAhwyFgjAE4-u9qJ93sYDGzQILYKgiET1ltBnH5x3ljrzG7vSPy11jDzkq22K74GLsDf326oluYUozLrqppE6kIlc7KvCtDgzsUlYOy2n3rkkPR0TZAGtEW186Oe_I1SKUlAoQ_6zi2-DEs4Q8FzqCdxIzRlO3HJYMFbUbSJzOD8PjoqhhfpJ8TvQTVeKU"/>
+</div>
+<div>
+<h2 class="text-3xl font-headline font-bold text-on-surface mb-2">Luis Diego Córdoba Arce</h2>
+<p class="font-headline text-xs tracking-widest text-primary uppercase mb-8">Fundador &amp; Director Creativo</p>
+<p class="text-stone-400 text-lg italic leading-relaxed">
+                        "En Vicolo, cada proyecto es un compromiso con la posteridad. No diseñamos para la tendencia del año, diseñamos para que la madera y la estructura sigan contando una historia de calidad décadas después."
+                    </p>
+</div>
+</div>
+</section>
+<!-- Section 5: Projects Editorial -->
+<section class="py-32 bg-surface-container-lowest" id="proceso">
+<div class="px-6 md:px-20 mb-20 text-center">
+<h2 class="font-headline text-5xl md:text-7xl font-bold tracking-tighter mb-6">El enfoque es <span class="text-primary italic font-light">el proyecto</span>,<br/>no el catálogo.</h2>
+<div class="h-1 w-24 bg-primary mx-auto"></div>
+</div>
+<!-- Bento Grid of Process -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-1 px-6 md:px-20">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container p-12 flex flex-col justify-end min-h-[400px] border border-outline-variant/10">
+<span class="font-headline text-primary text-6xl font-bold opacity-20 mb-4">01</span>
+<h3 class="font-headline text-2xl font-bold mb-4">CONCEPTUALIZACIÓN</h3>
+<p class="text-stone-500">Entendemos el flujo de vida o trabajo para crear planos técnicos que resuelvan problemas reales.</p>
+</div>
+<div class="bg-surface-container p-8 flex flex-col border border-outline-variant/10">
+<span class="font-headline text-primary text-4xl font-bold opacity-20 mb-2">02</span>
+<h3 class="font-headline text-lg font-bold mb-2">MATERIALIDAD</h3>
+<p class="text-stone-500 text-sm">Selección de maderas, herrajes y acabados premium.</p>
+</div>
+<div class="bg-surface-container p-8 flex flex-col border border-outline-variant/10">
+<span class="font-headline text-primary text-4xl font-bold opacity-20 mb-2">03</span>
+<h3 class="font-headline text-lg font-bold mb-2">FABRICACIÓN</h3>
+<p class="text-stone-500 text-sm">Artesanía digital con precisión milimétrica.</p>
+</div>
+<div class="md:col-span-2 bg-surface-container p-12 flex flex-col border border-outline-variant/10">
+<span class="font-headline text-primary text-4xl font-bold opacity-20 mb-2">04</span>
+<h3 class="font-headline text-xl font-bold mb-2">MONTAJE ARQUITECTÓNICO</h3>
+<p class="text-stone-500">Instalación limpia y ajuste final en obra por expertos.</p>
+</div>
+</div>
+</section>
+<!-- Section 6: Categories Showroom -->
+<section class="py-32 px-6 md:px-20 bg-surface" id="servicios">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline text-xs tracking-[0.4em] uppercase text-stone-500 mb-4">ESPECIALIDADES</h2>
+<h3 class="text-4xl md:text-5xl font-headline font-bold">Showroom de Categorías</h3>
+</div>
+<div class="hidden md:block">
+<span class="font-label text-xs uppercase tracking-widest text-primary border-b border-primary pb-2">Explorar todo el portafolio</span>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container mb-4 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="modern minimalist home living room with custom built-in wooden shelving and neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe_eAXnlB1fnVqDKj6GlAt_BRfZMbTcCPlb6SWX_CgtvivNNurED4PLqjWSu1pZZnnDNe6wnzlWNpRpkcjujX5nw3Oz1Os3NQCyV9cG_bDm1fBPbbpTUdwcdzAIVWFzd6hTx4i85hywCcyyzIYfUWc5mn_IgwwPWDPFq3lpS6qvMDanUBYh_OLwr8Luqx8Cnj0rXervyawoF7cA4hJLhT7Twu_2mDRx4nJX-5PIGY9zRbzbqLbfkJWbusxi-80pXQ2TcxFBRs2DLk"/>
+</div>
+<p class="font-headline text-xs tracking-widest uppercase font-bold text-center group-hover:text-primary transition-colors">Hogar</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container mb-4 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="luxurious walk-in closet with integrated LED lighting and dark wood cabinetry" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAisMmwaRpwQhVW857RaDCZxh2NJXCprN591ngf7D236-Bys9uU3sMUDguMpLoUkzzHKNheXBjQR2gzASw_wfTiDqZ8-2niBRFvrKSZCIGGMzCuU9B2O2FwINdGb-GHCrIDEKOzIEDmAfLk-OyD9hrTKZ8wWKkRomxU7HogJuywwf72otdkbWqbAxJDpZdNQmI8ohBaZXzk5mYKw287yPNUUgy-qQejy6xOai-HKRdzO_FrTdqU7TjnMITsAEeMTezWwy3vvgLyRtY"/>
+</div>
+<p class="font-headline text-xs tracking-widest uppercase font-bold text-center group-hover:text-primary transition-colors">Closets</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container mb-4 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="contemporary kitchen design featuring sleek wood panels and industrial fixtures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmRcKoZA7QFsXY1BHK1uIJbV6rPmVrEKE2_z8dXXHUOPpRQAHwu2zyoy3LJcSfG3B_jUeFPqnC22pdfMFbmbWVxWKB3LmcreSRsWDFrNlqTXSmDLv-xwuQ1n8gLTakaSYhquCdwKe9-6H4L9YPRPKdMS0CrCxNBHSkDqHNSG8vThGZz4-F944xWbHw2I7chiXRlpjq3WQGOXTC2eWVFKkMIW3ERQqhO_VZD7M7vgdyDrNPKFenGdvZUC82zWgm8SCgqL08ppmnni0"/>
+</div>
+<p class="font-headline text-xs tracking-widest uppercase font-bold text-center group-hover:text-primary transition-colors">Cocinas</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container mb-4 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="minimalist bathroom vanity with custom wood storage and stone countertop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM2MqDLJVHDap9Tq4feiqxqv1S_NVtzISma_WfP8FDvuvW4XHph_7U3XWHt97MPYHLuCjlFGMtnbtb6BbCAjFW89agaOTTuwoB9kHLxiQfxwpDY9Bn0bCXacuglfiE2Pd1keMd3iO3SP6jyISzaJRAcfBP0Rld-IGXoDvfkm4M2dSOjJE5RaRx5TzCYGts4qzQ2pjJg61bJEGN-sGR6KJWFA8KQSmkW_PWUI0DZ0R1jJcDSNzTpqKsuYIvvtYbugaLRC2ZGmQbg5Q"/>
+</div>
+<p class="font-headline text-xs tracking-widest uppercase font-bold text-center group-hover:text-primary transition-colors">Baños</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container mb-4 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="high-end corporate office workspace with custom executive wood desks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4aeymYBdp3KX4N8EB4SPw8s7-LeA6Mk9Iq80fVbysAXGOFAHSXp85LRq0UQkngh9iiJFb7YpbPr69I6_xAkVNjj03qQSM7Vl5-IeFVyebrLVghYx3kMWUtU3sPtLJF3JwPgxFsAdvkn4lk_BOJTtkDCmMIPIj8TPiOnOyq_Cp3KfHqamW068dy9JSt_WFbvsWrdtzt8yugCwwSq55VlV8_F7mLMVO7zWRCaqy61NmpWqAv2k0NNO_BqQHTC4w1FLHYcqDUwRTWW8"/>
+</div>
+<p class="font-headline text-xs tracking-widest uppercase font-bold text-center group-hover:text-primary transition-colors">Oficinas</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-square bg-surface-container mb-4 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="boutique airbnb apartment interior with space-saving smart custom furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE3wU5Maauq9g8s9KSHOehY4eFUXoRE7MNZwSRfSyxtixtJ06HDVvPaI63RAxPi4X-3QLHdBq7sz0_gDgWP3ZXz7NNEsdvNT_Jl4mLiP0eNxEj_6mQA4GcgZpcVbBgMllTkH2k33VOqmFmvi6eYXUliCiygNrNmjb4c5Egr0z3_gjd-zFENnxpZUEm7BBTMEE4lcZT3V20Ygm9yKsqyut6L4V8qkfkBcoO_Nb2oMas-C3NM1LL580M884K-7CbAKgDASNBptSgf5U"/>
+</div>
+<p class="font-headline text-xs tracking-widest uppercase font-bold text-center group-hover:text-primary transition-colors">Airbnb</p>
+</div>
+</div>
+</section>
+<!-- Section 7: Case Studies -->
+<section class="py-32 px-6 md:px-20 bg-surface-container-low" id="proyectos">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-16">Estudios de Caso</h2>
+<div class="space-y-24">
+<!-- Case Study 1 -->
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="lg:w-2/3">
+<img class="w-full aspect-video object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="wide shot of a custom modern kitchen in Escazu with emerald green accents and oak wood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3DPFLDZ3ysMs9KMj2Fmq3082MNn1C3ntDIAbyobOCjrwQCH578ZCkhZdCSpP48AHTtTaGGqdpxgvFK9b74PHGWu4CDp9uBv6tx3QX2V87qioVA0TklSx_xTrUm4CWX0cr3aWjdICZNetbKVuSFGuC2glyzJaSlVuMr_qgN3NY7cZUllrCSnedTHKPNNjGhNTrz6flwBnETJSBFOj5RCuU5VOaDpaA-3B7Fhawhc6kapezf5HowuX1-AmyQfKz-OXztFfDGmy4Ai0"/>
+</div>
+<div class="lg:w-1/3 flex flex-col justify-center">
+<span class="font-headline text-xs tracking-widest text-primary uppercase mb-4">ESCAZÚ, SAN JOSÉ</span>
+<h3 class="text-3xl font-headline font-bold mb-6">Cocina Airbnb High-End</h3>
+<p class="text-stone-400 mb-8 leading-relaxed">
+                            Reto: Maximizar el almacenamiento en un espacio de 12m2 para un alquiler de lujo. <br/> Solución: Gabinetes de piso a techo con sistemas de apertura táctil y acabado en roble mate.
+                        </p>
+<div class="flex gap-4">
+<div class="bg-surface-container-highest px-4 py-2 flex items-center gap-2">
+<span class="h-1 w-4 bg-primary"></span>
+<span class="font-headline text-[10px] tracking-widest uppercase font-bold">ROBLE</span>
+</div>
+<div class="bg-surface-container-highest px-4 py-2 flex items-center gap-2">
+<span class="h-1 w-4 bg-primary"></span>
+<span class="font-headline text-[10px] tracking-widest uppercase font-bold">12m²</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Case Study 2 -->
+<div class="flex flex-col lg:flex-row-reverse gap-12">
+<div class="lg:w-2/3">
+<img class="w-full aspect-video object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="luxury walk-in closet in Santa Ana with island storage and ambient drawer lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbpAukOT5MAlVfZZxdsc1fOpUtNe4B4YtB6X70NqgmQaVFBcqYFzXV4gMk7th0HTCrQiQ1n2fSFVLhRkVpRNxQt4vdqqalKahfgShllJRQunjY9-n-xnwoeDj4Fb-vwxlKV19V9GBjZF6aPiYrnuhDQfC8EUp5zHTRFbMmWf1NKObGOt4Tt95fz2kYT7lsLUByCDdHyby4u_3IVsn-CatD3s3dyte_IW0YcM8OcWYGhC7U6q432izDJMLkGzpt7Rj6nOqNCJ0-_zI"/>
+</div>
+<div class="lg:w-1/3 flex flex-col justify-center">
+<span class="font-headline text-xs tracking-widest text-primary uppercase mb-4">SANTA ANA, SAN JOSÉ</span>
+<h3 class="text-3xl font-headline font-bold mb-6">Vestidor Residencial</h3>
+<p class="text-stone-400 mb-8 leading-relaxed">
+                            Reto: Crear una experiencia de "boutique" privada para una residencia de lujo. <br/> Solución: Isla central con cajoneras de terciopelo e iluminación LED integrada en cada entrepaño.
+                        </p>
+<div class="flex gap-4">
+<div class="bg-surface-container-highest px-4 py-2 flex items-center gap-2">
+<span class="h-1 w-4 bg-primary"></span>
+<span class="font-headline text-[10px] tracking-widest uppercase font-bold">NOGAL</span>
+</div>
+<div class="bg-surface-container-highest px-4 py-2 flex items-center gap-2">
+<span class="h-1 w-4 bg-primary"></span>
+<span class="font-headline text-[10px] tracking-widest uppercase font-bold">BOUTIQUE</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 8: Testimonials -->
+<section class="py-32 px-6 md:px-20 bg-surface">
+<h2 class="font-headline text-xs tracking-[0.4em] uppercase text-stone-500 mb-16 text-center">LO QUE DICEN NUESTROS CLIENTES</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container p-12 border border-outline-variant/5">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">format_quote</span>
+<p class="text-stone-300 italic mb-10 leading-relaxed">"La atención al detalle de Luis Diego es increíble. Mi cocina no solo es hermosa, es funcional en formas que no imaginaba."</p>
+<div>
+<p class="font-headline font-bold text-sm uppercase tracking-widest">María José R.</p>
+<p class="text-[10px] text-stone-500 uppercase tracking-tighter">Residente en Escazú</p>
+</div>
+</div>
+<div class="bg-surface-container p-12 border border-outline-variant/5">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">format_quote</span>
+<p class="text-stone-300 italic mb-10 leading-relaxed">"Para mi oficina corporativa necesitaba algo serio pero moderno. Vicolo superó todas las expectativas de tiempo y calidad."</p>
+<div>
+<p class="font-headline font-bold text-sm uppercase tracking-widest">Carlos A.</p>
+<p class="text-[10px] text-stone-500 uppercase tracking-tighter">CEO Corporativo</p>
+</div>
+</div>
+<div class="bg-surface-container p-12 border border-outline-variant/5">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">format_quote</span>
+<p class="text-stone-300 italic mb-10 leading-relaxed">"Equipamos 3 Airbnbs con ellos y la durabilidad de los acabados es impresionante. Siguen como nuevos tras 1 año."</p>
+<div>
+<p class="font-headline font-bold text-sm uppercase tracking-widest">Daniela P.</p>
+<p class="text-[10px] text-stone-500 uppercase tracking-tighter">Inversionista Inmobiliaria</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 9: Coverage/FAQ -->
+<section class="py-32 px-6 md:px-20 bg-surface-container-lowest" id="faq">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+<div>
+<h2 class="text-4xl font-headline font-bold mb-8">Preguntas Frecuentes</h2>
+<div class="space-y-4">
+<details class="group bg-surface-container p-6">
+<summary class="list-none flex justify-between items-center cursor-pointer">
+<span class="font-headline font-bold text-sm uppercase tracking-widest">¿Cuál es el tiempo de entrega?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-stone-500 text-sm leading-relaxed">El tiempo promedio es de 6 a 8 semanas dependiendo de la complejidad y volumen del proyecto.</p>
+</details>
+<details class="group bg-surface-container p-6">
+<summary class="list-none flex justify-between items-center cursor-pointer">
+<span class="font-headline font-bold text-sm uppercase tracking-widest">¿Trabajan fuera del GAM?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-stone-500 text-sm leading-relaxed">Nuestra base es el Gran Área Metropolitana, pero ejecutamos proyectos especiales en zonas costeras bajo coordinación previa.</p>
+</details>
+<details class="group bg-surface-container p-6">
+<summary class="list-none flex justify-between items-center cursor-pointer">
+<span class="font-headline font-bold text-sm uppercase tracking-widest">¿Ofrecen garantía?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="mt-4 text-stone-500 text-sm leading-relaxed">Todas nuestras piezas cuentan con garantía estructural de 5 años y garantía de herrajes según el fabricante (Blum/Häfele).</p>
+</details>
+</div>
+</div>
+<div>
+<h2 class="text-4xl font-headline font-bold mb-8">Cobertura</h2>
+<div class="relative bg-surface-container h-[400px] flex flex-col justify-center items-center">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 grayscale" data-alt="abstract map showing the central valley region of Costa Rica with modern graphic overlays" data-location="Costa Rica" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVZvycs0RSRdeYsJ7nwZTvTMLpNvkyxls3N9LcgUjMaRz8UtGUpG9AiabvnyidzEAagdYcCRdZ_W5tDREiIAuwTi7LLH4MUKBYU4DyxB3M5mllc-si1tvcUtmTCiXXFIs7qApwR2bdjE8x7JaZ9QdGWJKQcW6c0PNAh904x7FnwoRw8iOMeS1v8_Q3TJ57z5ZnG-gon8oDA6WOa777Q5MXNVGSW-OPxpHg_nfTQdNywhyKzMOfKdQ-St9s4bGXpusarUsPUdIjWBI"/>
+<div class="relative z-10 text-center p-12">
+<h3 class="font-headline text-2xl font-bold mb-4">Gran Área Metropolitana</h3>
+<p class="text-stone-400 mb-6">San José, Heredia, Alajuela, Cartago.</p>
+<div class="inline-flex items-center gap-2 text-primary font-headline text-xs font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined">location_on</span>
+                                Presencia en los mejores residenciales del país
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 10: Final CTA -->
+<section class="py-32 px-6 md:px-20 bg-primary relative overflow-hidden">
+<div class="absolute inset-0 grain-texture"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<h2 class="text-5xl md:text-8xl font-headline font-bold text-on-primary mb-8 tracking-tighter leading-none">¿Listo para elevar <br/>tu espacio?</h2>
+<p class="text-on-primary/80 text-xl max-w-2xl mb-12">Agenda una cita técnica con nuestro director creativo para discutir tu próximo proyecto de mobiliario personalizado.</p>
+<a class="bg-on-primary text-primary px-16 py-6 font-headline font-bold uppercase tracking-[0.2em] text-lg hover:bg-on-primary-container hover:text-on-primary transition-all" href="#">
+                    WhatsApp Directo
+                </a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="py-16 px-6 md:px-20 bg-surface border-t border-outline-variant/10 text-stone-500">
+<div class="flex flex-col md:row justify-between items-center gap-8">
+<div class="text-2xl font-bold tracking-tighter text-[#e8c086] font-['Space_Grotesk']">VICOLO</div>
+<div class="flex gap-10 font-headline text-[10px] uppercase tracking-widest font-bold">
+<a class="hover:text-primary" href="#">Instagram</a>
+<a class="hover:text-primary" href="#">Pinterest</a>
+<a class="hover:text-primary" href="#">LinkedIn</a>
+</div>
+<div class="font-headline text-[10px] uppercase tracking-widest">
+                    © 2024 VICOLO DESIGNS. TODOS LOS DERECHOS RESERVADOS.
+                </div>
+</div>
+</footer>
+</main>
+<!-- Floating Action Button (Global) - Suppression Check: Active only on Main Canvas -->
+<a class="fixed bottom-10 right-10 z-50 bg-primary text-on-primary p-5 shadow-2xl hover:scale-110 transition-transform active:scale-95 group" href="https://wa.me/vicolo">
+<span class="material-symbols-outlined text-3xl">chat</span>
+<span class="absolute right-full mr-4 bg-surface-container-highest text-on-surface px-4 py-2 text-xs font-headline font-bold tracking-widest uppercase whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">COTIZAR AHORA</span>
+</a>
+</body></html>
