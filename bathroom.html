@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#e4beb2",
+                    "on-surface-variant": "#c4c7c7",
+                    "primary-fixed-dim": "#e8c086",
+                    "surface-variant": "#353535",
+                    "on-secondary-fixed": "#111d23",
+                    "inverse-on-surface": "#313030",
+                    "surface-container-low": "#1c1b1b",
+                    "on-primary": "#432c00",
+                    "secondary": "#bcc8d0",
+                    "on-tertiary-fixed": "#2b160f",
+                    "outline-variant": "#444748",
+                    "error": "#ffb4ab",
+                    "secondary-fixed-dim": "#bcc8d0",
+                    "surface": "#131313",
+                    "on-tertiary-fixed-variant": "#5b4137",
+                    "on-tertiary-container": "#ae8c80",
+                    "surface-dim": "#131313",
+                    "outline": "#8e9192",
+                    "on-secondary-fixed-variant": "#3d484f",
+                    "primary-container": "#3e2800",
+                    "surface-bright": "#393939",
+                    "inverse-primary": "#775928",
+                    "surface-container": "#20201f",
+                    "background": "#131313",
+                    "surface-tint": "#e8c086",
+                    "on-surface": "#e5e2e1",
+                    "secondary-fixed": "#d8e4ec",
+                    "on-primary-fixed": "#281800",
+                    "primary-fixed": "#ffdeae",
+                    "tertiary": "#e4beb2",
+                    "tertiary-fixed": "#ffdbce",
+                    "on-primary-fixed-variant": "#5d4213",
+                    "secondary-container": "#3f4b51",
+                    "surface-container-highest": "#353535",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-container": "#aebac2",
+                    "on-error-container": "#ffdad6",
+                    "inverse-surface": "#e5e2e1",
+                    "on-secondary": "#263238",
+                    "on-error": "#690005",
+                    "on-background": "#e5e2e1",
+                    "on-primary-container": "#b18e58",
+                    "primary": "#e8c086",
+                    "surface-container-high": "#2a2a2a",
+                    "error-container": "#93000a",
+                    "tertiary-container": "#3e271e",
+                    "on-tertiary": "#422b22"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #131313; }
+        ::-webkit-scrollbar-thumb { background: #353535; }
+        .blueprint-grid {
+            background-image: linear-gradient(#353535 1px, transparent 1px), linear-gradient(90deg, #353535 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-color: #131313;
+        }
+        .sliding-door-reveal {
+            clip-path: inset(0 50% 0 50%);
+            transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        .group:hover .sliding-door-reveal {
+            clip-path: inset(0 0 0 0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body cursor-crosshair">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-xl border-b border-[#353535] flex justify-between items-center px-8 h-16 w-full max-w-full">
+<div class="text-xl font-bold tracking-tighter text-[#e8c086] font-['Space_Grotesk']">ARCH_STUDIO</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-[#e8c086] border-b border-[#e8c086] pb-1 hover:text-[#e8c086] transition-colors duration-300" href="#">GALLERY</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-[#b18e58] hover:text-[#e8c086] transition-colors duration-300" href="#">SPECS</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-[#b18e58] hover:text-[#e8c086] transition-colors duration-300" href="#">PROCESS</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-[#b18e58] hover:text-[#e8c086] transition-colors duration-300" href="#">ATELIER</a>
+</div>
+<button class="bg-[#e8c086] text-[#432c00] px-6 py-2 font-['Space_Grotesk'] font-bold text-xs uppercase tracking-widest hover:bg-[#ffdeae] transition-colors">
+            CONSULT
+        </button>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] w-20 border-r border-[#353535] bg-[#131313] flex flex-col items-center pt-10 z-40">
+<div class="flex flex-col items-center justify-center bg-[#20201f] text-[#e8c086] w-full py-6 border-l-2 border-[#e8c086] cursor-pointer">
+<span class="material-symbols-outlined mb-2" data-icon="square_foot">square_foot</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">DIMENSIONS</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#353535] w-full py-6 hover:bg-[#20201f] hover:text-[#b18e58] transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-2" data-icon="straighten">straighten</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">MATERIALS</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#353535] w-full py-6 hover:bg-[#20201f] hover:text-[#b18e58] transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-2" data-icon="architecture">architecture</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">JOINERY</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#353535] w-full py-6 hover:bg-[#20201f] hover:text-[#b18e58] transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-2" data-icon="format_paint">format_paint</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">FINISH</span>
+</div>
+<div class="mt-auto pb-8 flex flex-col items-center">
+<div class="w-8 h-8 bg-surface-container-highest border border-outline-variant flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="person">person</span>
+</div>
+<span class="font-['Space_Grotesk'] text-[8px] tracking-tighter text-[#353535]">V.02.24</span>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="pl-20 pt-16 min-h-screen">
+<!-- Header Section -->
+<section class="px-12 py-16 border-b border-surface-container-highest">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end">
+<div class="space-y-4">
+<span class="font-label text-primary uppercase tracking-[0.3em] text-xs">Portfolio 002</span>
+<h1 class="font-headline text-6xl font-light text-on-surface leading-none tracking-tight">PRECISION <span class="text-primary-fixed-dim">VANITIES</span></h1>
+<p class="font-body text-outline max-w-xl text-lg">A curated selection of architectural bathroom transformations, focusing on monolithic counter geometry and seamless walnut joinery.</p>
+</div>
+<div class="text-right hidden lg:block">
+<div class="font-label text-[10px] text-surface-container-highest mb-2 tracking-widest">COORDINATES</div>
+<div class="font-headline text-xl text-outline-variant">40.7128° N, 74.0060° W</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Symmetrical Project Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-0 border-b border-surface-container-highest">
+<!-- Project One: The Monolith -->
+<div class="relative group border-r border-surface-container-highest h-[600px] overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Minimalist modern bathroom with floating dark marble vanity, brushed gold hardware, and architectural linear lighting in a dark slate environment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0Osqgg-5pR4ZxCERdNugoM5sKH2G9KkYndyUv5Z30V_44GLwFhHjBAIcdE5HU6vs9TmHT7G8iU0vM1Cl9r2fudUw9DYG8DZF5Ku7fDq82Vj33GABFqX4CMallV6gDxYZQbCQxcXO2XMDRcUXaGEeDpynetHSDhT63u8KkNlUNEalUGKUKXTyvWyxqc87GBECUcdN3b_RBzyl35eo-xh7HFzPBHZvj0Ov8E7aFLj6mn5nhQkM2x2fgY4OAHjeZwdVYMG75ujdMDWI')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+<!-- Sliding Reveal Details -->
+<div class="sliding-door-reveal absolute inset-0 bg-surface/95 backdrop-blur-md z-20 flex flex-col justify-center px-16">
+<div class="space-y-8">
+<div class="border-l-2 border-primary pl-6">
+<h3 class="font-headline text-3xl text-primary mb-2">THE MONOLITH</h3>
+<p class="font-body text-on-surface-variant max-w-md">Integrated double-basin system featuring 45-degree mitered edges and hidden drainage channels.</p>
+</div>
+<div class="grid grid-cols-2 gap-8 pt-8">
+<div class="space-y-2">
+<span class="font-label text-[10px] text-outline uppercase tracking-widest">Material</span>
+<p class="font-headline text-lg">Obsidian Slate</p>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] text-outline uppercase tracking-widest">Joinery</span>
+<p class="font-headline text-lg">Inlaid Brass</p>
+</div>
+</div>
+<button class="mt-8 border border-primary text-primary px-8 py-3 font-label text-xs tracking-widest hover:bg-primary hover:text-on-primary transition-all">VIEW FULL SPECS</button>
+</div>
+</div>
+<div class="absolute bottom-8 left-8 z-10 transition-opacity duration-300 group-hover:opacity-0">
+<span class="font-label text-[10px] text-primary-fixed-dim uppercase tracking-widest mb-2 block">Case Study 01</span>
+<h2 class="font-headline text-2xl tracking-wide uppercase">Monolithic Double Basin</h2>
+</div>
+</div>
+<!-- Project Two: The Walnut Grain -->
+<div class="relative group h-[600px] overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Contemporary bathroom with warm walnut wood custom vanity, integrated white stone sink, and large format limestone wall tiles." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA9YcZc4r-DLagoDZ4HAhQax-5EbptZ2E4fg4HbXPLQGjUa6kHsCRx97r3kYZRHy0p9zQo5GtsxP89Cx0w9zxUUUVFkHNshuZUGKqNdYHGtwEMn7jMxOJlrukhWxC2j-QM_p4dse3M4yubzpu3F20a5CeR4GkzzhXikB8D3WubAhdef8eXxu2JOrVQRhS-JboUVeiPeQV8tm0haAMAal0yiiLuvp_Zli6dMaNUNrsBZtogabD9naDwSu3F3B-S3FZe5CAom-z_BHjs')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+<!-- Sliding Reveal Details -->
+<div class="sliding-door-reveal absolute inset-0 bg-surface/95 backdrop-blur-md z-20 flex flex-col justify-center px-16">
+<div class="space-y-8">
+<div class="border-l-2 border-primary pl-6">
+<h3 class="font-headline text-3xl text-primary mb-2">WALNUT VERTICAL</h3>
+<p class="font-body text-on-surface-variant max-w-md">Grain-matched drawer fronts with integrated J-pull handles and moisture-sealed internal framing.</p>
+</div>
+<div class="grid grid-cols-2 gap-8 pt-8">
+<div class="space-y-2">
+<span class="font-label text-[10px] text-outline uppercase tracking-widest">Wood Species</span>
+<p class="font-headline text-lg">American Walnut</p>
+</div>
+<div class="space-y-2">
+<span class="font-label text-[10px] text-outline uppercase tracking-widest">Finish</span>
+<p class="font-headline text-lg">Hard-wax Oil</p>
+</div>
+</div>
+<button class="mt-8 border border-primary text-primary px-8 py-3 font-label text-xs tracking-widest hover:bg-primary hover:text-on-primary transition-all">VIEW FULL SPECS</button>
+</div>
+</div>
+<div class="absolute bottom-8 left-8 z-10 transition-opacity duration-300 group-hover:opacity-0">
+<span class="font-label text-[10px] text-primary-fixed-dim uppercase tracking-widest mb-2 block">Case Study 02</span>
+<h2 class="font-headline text-2xl tracking-wide uppercase">Vertical Grain Symmetry</h2>
+</div>
+</div>
+</section>
+<!-- Technical Specification Sidebar/Grid Hybrid -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-0 border-b border-surface-container-highest">
+<div class="md:col-span-8 p-12 bg-surface-container-lowest blueprint-grid border-r border-surface-container-highest flex items-center justify-center overflow-hidden">
+<div class="relative w-full aspect-video border border-primary/20 p-8 flex items-center justify-center group">
+<!-- Technical Drawing Simulation -->
+<div class="absolute top-4 left-4 font-label text-[10px] text-primary/40">DWG REF: 882-VA-01</div>
+<div class="absolute bottom-4 right-4 font-label text-[10px] text-primary/40">SCALE: 1:20 @ A3</div>
+<div class="w-3/4 h-2/3 border-2 border-primary/60 relative flex items-center justify-center">
+<div class="absolute -top-6 w-full flex justify-between items-end border-x border-primary/40 h-4">
+<div class="w-full border-t border-primary/40"></div>
+</div>
+<div class="font-label text-[10px] text-primary absolute -top-10">1800mm</div>
+<div class="absolute -left-6 h-full flex flex-col justify-between items-start border-y border-primary/40 w-4">
+<div class="h-full border-l border-primary/40"></div>
+</div>
+<div class="font-label text-[10px] text-primary absolute -left-16 rotate-270">550mm</div>
+<div class="flex flex-col items-center gap-4">
+<div class="w-32 h-1 bg-primary/20"></div>
+<div class="w-48 h-1 bg-primary/20"></div>
+<span class="material-symbols-outlined text-primary/40 text-4xl" data-icon="architecture">architecture</span>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface p-12 space-y-12">
+<div>
+<h4 class="font-label text-xs text-primary-fixed-dim tracking-[0.2em] uppercase mb-6">Technical Standards</h4>
+<ul class="space-y-6">
+<li class="flex gap-4 items-start">
+<div class="w-1 h-12 bg-primary mt-1"></div>
+<div>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest">Dimensioning</span>
+<p class="font-body text-on-surface leading-snug">All vanities are bespoke, manufactured to ±0.5mm tolerances within our London atelier.</p>
+</div>
+</li>
+<li class="flex gap-4 items-start">
+<div class="w-1 h-12 bg-outline-variant mt-1"></div>
+<div>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest">Waterproofing</span>
+<p class="font-body text-on-surface leading-snug">Marine-grade plywood substrates reinforced with epoxy-bonded joints.</p>
+</div>
+</li>
+<li class="flex gap-4 items-start">
+<div class="w-1 h-12 bg-outline-variant mt-1"></div>
+<div>
+<span class="font-label text-[10px] text-outline uppercase tracking-widest">Sustainability</span>
+<p class="font-body text-on-surface leading-snug">FSC Certified lumber and VOC-free finishes for healthy living spaces.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="p-8 bg-surface-container border border-outline-variant">
+<span class="font-label text-[10px] text-primary uppercase tracking-widest block mb-4">Material Samples</span>
+<div class="flex gap-4">
+<div class="w-12 h-12 bg-surface-container-highest border border-outline-variant" title="Italian Carrara"></div>
+<div class="w-12 h-12 bg-[#2a2a2a] border border-outline-variant" title="Matte Black Slate"></div>
+<div class="w-12 h-12 bg-[#b18e58] border border-outline-variant" title="American Walnut"></div>
+<div class="w-12 h-12 bg-[#bcc8d0] border border-outline-variant" title="Smoked Oak"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#131313] border-t border-[#353535] relative w-full mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-8 w-full">
+<div class="text-[#e8c086] font-bold font-['Space_Grotesk'] text-sm mb-4 md:mb-0">ARCH_STUDIO</div>
+<div class="flex space-x-8">
+<a class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-[#353535] hover:text-[#e8c086] transition-opacity duration-500" href="#">CERTIFICATIONS</a>
+<a class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-[#353535] hover:text-[#e8c086] transition-opacity duration-500" href="#">WARRANTY</a>
+<a class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-[#353535] hover:text-[#e8c086] transition-opacity duration-500" href="#">SUSTAINABILITY</a>
+<a class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-[#353535] hover:text-[#e8c086] transition-opacity duration-500" href="#">LEGAL</a>
+</div>
+<div class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-[#353535] mt-4 md:mt-0">
+                    ©2024 ARCH_STUDIO PRECISION JOINERY. ALL RIGHTS RESERVED.
+                </div>
+</div>
+</footer>
+</main>
+</body></html>
