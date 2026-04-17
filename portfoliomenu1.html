@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARCHITRAVE | Precision Cabinetry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#8e9192",
+                        "secondary-fixed-dim": "#bcc8d0",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-container": "#3e2800",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#111d23",
+                        "on-primary": "#432c00",
+                        "surface-container-highest": "#353535",
+                        "tertiary-fixed": "#ffdbce",
+                        "on-secondary-container": "#aebac2",
+                        "error": "#ffb4ab",
+                        "outline-variant": "#444748",
+                        "surface": "#131313",
+                        "tertiary-fixed-dim": "#e4beb2",
+                        "tertiary": "#e4beb2",
+                        "on-primary-container": "#b18e58",
+                        "inverse-primary": "#775928",
+                        "secondary": "#bcc8d0",
+                        "surface-container": "#20201f",
+                        "primary": "#e8c086",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed": "#ffdeae",
+                        "on-secondary-fixed-variant": "#3d484f",
+                        "inverse-on-surface": "#313030",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#5b4137",
+                        "surface-dim": "#131313",
+                        "secondary-container": "#3f4b51",
+                        "background": "#131313",
+                        "tertiary-container": "#3e271e",
+                        "surface-bright": "#393939",
+                        "primary-fixed-dim": "#e8c086",
+                        "on-tertiary-fixed": "#2b160f",
+                        "surface-variant": "#353535",
+                        "on-primary-fixed": "#281800",
+                        "inverse-surface": "#e5e2e1",
+                        "on-surface": "#e5e2e1",
+                        "on-tertiary": "#422b22",
+                        "on-surface-variant": "#c4c7c7",
+                        "on-error": "#690005",
+                        "surface-container-low": "#1c1b1b",
+                        "secondary-fixed": "#d8e4ec",
+                        "surface-tint": "#e8c086",
+                        "on-secondary": "#263238",
+                        "on-primary-fixed-variant": "#5d4213",
+                        "on-tertiary-container": "#ae8c80"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .blueprint-grid {
+            background-image: linear-gradient(#20201f 1px, transparent 1px), linear-gradient(90deg, #20201f 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .ghost-border {
+            border: 1px solid rgba(142, 145, 146, 0.15);
+        }
+        .joinery-gap {
+            gap: 1px;
+        }
+        .glass-header {
+            background: rgba(19, 19, 19, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 rounded-none border-b border-zinc-800 bg-[#131313]/80 backdrop-blur-[20px]">
+<div class="flex justify-between items-center w-full px-12 py-6">
+<div class="text-2xl font-bold tracking-[0.2em] text-[#e8c086] font-['Space_Grotesk'] uppercase">
+                ARCHITRAVE
+            </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-[#e8c086] border-b-2 border-[#e8c086] pb-1 font-['Space_Grotesk'] tracking-[0.1em] uppercase text-sm font-bold transition-colors duration-300" href="#">Collections</a>
+<a class="text-zinc-500 font-medium font-['Space_Grotesk'] tracking-[0.1em] uppercase text-sm hover:text-[#b18e58] transition-colors duration-300" href="#">Bespoke</a>
+<a class="text-zinc-500 font-medium font-['Space_Grotesk'] tracking-[0.1em] uppercase text-sm hover:text-[#b18e58] transition-colors duration-300" href="#">Materials</a>
+<a class="text-zinc-500 font-medium font-['Space_Grotesk'] tracking-[0.1em] uppercase text-sm hover:text-[#b18e58] transition-colors duration-300" href="#">Engineering</a>
+<a class="text-zinc-500 font-medium font-['Space_Grotesk'] tracking-[0.1em] uppercase text-sm hover:text-[#b18e58] transition-colors duration-300" href="#">Studio</a>
+</div>
+<button class="bg-primary hover:bg-primary-fixed-dim text-on-primary px-8 py-3 font-label text-sm font-bold tracking-widest transition-all duration-300 active:scale-95">
+                GET QUOTE
+            </button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero: The Blueprint Interface -->
+<section class="relative h-[921px] bg-surface blueprint-grid flex items-center justify-center overflow-hidden border-b border-outline-variant/10">
+<!-- Absolute Positioning of Blueprint Elements -->
+<div class="relative w-full max-w-7xl h-full flex flex-col justify-center px-12 pointer-events-none">
+<div class="mb-8 max-w-2xl">
+<span class="font-label text-primary text-sm tracking-[0.3em] uppercase block mb-4">Master Planning / 2024</span>
+<h1 class="font-headline text-7xl font-bold text-on-surface leading-tight tracking-tight uppercase">
+                        Structure <br/> &amp; Symmetry
+                    </h1>
+<p class="font-body text-secondary mt-6 max-w-lg text-lg leading-relaxed">
+                        Where architectural rigor meets artisanal joinery. Explore our ecosystem of precision-engineered cabinetry through the lens of a technical floor plan.
+                    </p>
+</div>
+<!-- Callout Specs -->
+<div class="flex gap-12 mt-12">
+<div class="flex flex-col border-l border-primary pl-4">
+<span class="font-label text-[10px] text-zinc-500 tracking-tighter uppercase">Tolerance</span>
+<span class="font-headline text-xl text-primary font-bold">±0.2mm</span>
+</div>
+<div class="flex flex-col border-l border-primary pl-4">
+<span class="font-label text-[10px] text-zinc-500 tracking-tighter uppercase">Material</span>
+<span class="font-headline text-xl text-primary font-bold">Grade A Walnut</span>
+</div>
+<div class="flex flex-col border-l border-primary pl-4">
+<span class="font-label text-[10px] text-zinc-500 tracking-tighter uppercase">Hardness</span>
+<span class="font-headline text-xl text-primary font-bold">Janka 1010</span>
+</div>
+</div>
+</div>
+<!-- Blueprint Map Overlay (Interlocking Modules) -->
+<div class="absolute right-0 top-0 bottom-0 w-1/2 flex items-center justify-center">
+<div class="grid grid-cols-2 grid-rows-2 w-[600px] h-[600px] gap-1 p-1 bg-outline-variant/20">
+<!-- Kitchen Module -->
+<div class="group relative bg-surface-container hover:bg-transparent transition-all duration-500 cursor-pointer overflow-hidden ghost-border p-8 pointer-events-auto">
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+<img class="w-full h-full object-cover" data-alt="Close-up of minimalist oak kitchen cabinets with seamless handles and precision shadow gaps in dramatic architectural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9BYlupL3M_z7TZmqbd25t_TNAKPlFbNEYnNwab3EmORCWr3OBMj3RqAIMIVaDpimwd1teGRPur0tGQUO0hnYYmqYxMzmnZaaO9M19yovJhf2Dxf-BvRVPp1GEILE8O1WyQNvp1godU5snGH7M8s0mKYXwBXgXZAWNazRjNpSa_MujiDiB0YQRME5_XvBLgyJMqfHhD3xJWhYO5pBFGWEPAPToRheVMuv_qHRh8TWr18diKvyBNAwDdFtN3HEmrWS06nM50grp498"/>
+<div class="absolute inset-0 bg-surface/40"></div>
+</div>
+<div class="relative z-10">
+<span class="font-label text-xs text-primary/50 group-hover:text-primary transition-colors">ZONE_01</span>
+<h3 class="font-headline text-2xl font-bold uppercase mt-2">Kitchen</h3>
+<div class="w-8 h-[1px] bg-primary mt-4 group-hover:w-24 transition-all duration-500"></div>
+</div>
+<!-- Technical annotation -->
+<div class="absolute bottom-4 right-4 text-[9px] font-label text-zinc-600 uppercase tracking-widest opacity-40">
+                            Scale: 1:20 / Rev.B
+                        </div>
+</div>
+<!-- Living Module -->
+<div class="group relative bg-surface-container hover:bg-transparent transition-all duration-500 cursor-pointer overflow-hidden ghost-border p-8 pointer-events-auto">
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+<img class="w-full h-full object-cover" data-alt="Bespoke walnut wall unit and shelving system integrated into a modern concrete living room wall with floor-to-ceiling windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAniad_FtpZg0SoOOvVHvwvAGyAHSYNPcpPv_mxr-CeI43YKhy0B8JkOQORyyZJk6YcVPMxOoP9uYxxYZfy1cdAjFfVPG8uJRuk24-IGnhdOElnSU0TMevlyj3WWK8pguo2j6z-QOGID7jA6S5rvVxE6yibkq4JXg9T1UustoUowtm_KiJYwRMpD36mjjJKx33f7c22LAP1iDqE3E7AxEhKs6b9j17nfg2ZYrF89ltjtvjk7hh47SeV79V60LGRBdD0JdDQikQZ4DY"/>
+<div class="absolute inset-0 bg-surface/40"></div>
+</div>
+<div class="relative z-10">
+<span class="font-label text-xs text-primary/50 group-hover:text-primary transition-colors">ZONE_02</span>
+<h3 class="font-headline text-2xl font-bold uppercase mt-2">Living</h3>
+<div class="w-8 h-[1px] bg-primary mt-4 group-hover:w-24 transition-all duration-500"></div>
+</div>
+</div>
+<!-- Bedroom Module -->
+<div class="group relative bg-surface-container hover:bg-transparent transition-all duration-500 cursor-pointer overflow-hidden ghost-border p-8 pointer-events-auto">
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+<img class="w-full h-full object-cover" data-alt="Sophisticated custom wardrobes with fluted wood details and integrated LED lighting in a luxury master bedroom suite" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw0IwLq9f2z4nL95bYOXLJVHE08fFlzSEk2tvLAauxHVjCnVw7miVXTUlKyUQKnwf8vqaihblFAryl5R5qJLhOUsPLEQkHf46lS4jEk3o5jmMsbrHq1QZo07yeb6U8wGOssNgXdeaFa4KdZ1_g7AdRngz-I-PBVCrv6tnFOVHrhaXBzbSl3Sd6gez4MXwAJc8D9Ye04__2PIE1yCyuinJRke3eOX-M6RUFEr9TPY12F-UJzTNeruMNDBiuQVcJW33Jy-fbTtHd6W8"/>
+<div class="absolute inset-0 bg-surface/40"></div>
+</div>
+<div class="relative z-10">
+<span class="font-label text-xs text-primary/50 group-hover:text-primary transition-colors">ZONE_03</span>
+<h3 class="font-headline text-2xl font-bold uppercase mt-2">Bedroom</h3>
+<div class="w-8 h-[1px] bg-primary mt-4 group-hover:w-24 transition-all duration-500"></div>
+</div>
+</div>
+<!-- Bathroom Module -->
+<div class="group relative bg-surface-container hover:bg-transparent transition-all duration-500 cursor-pointer overflow-hidden ghost-border p-8 pointer-events-auto">
+<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+<img class="w-full h-full object-cover" data-alt="Floating vanity cabinet crafted from moisture-resistant teak with a monolithic stone basin in a moody slate bathroom" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy17f3ta2OJJVDaTEzk8aE8tHrXENIIXoJdkIjK8Jrnth4TJ3RZ0gBD1Ujd96itfP7y157RsFRmHVdaxT49qBhU-q9ov3CgI8ueMG8tVN77uLJnGAMzknpfFaFvTfA63e1MfUcMVddXRxlgjIxP3o90v_SII0ur3j1DrXrfgRg8eDtH1lyfcktVqIR1DbEK8bgo1_6ZOBBZl7AOEFY4APJO33c3VdjwqndkpGUAhep1dzNz4y16-RYv6bMVP-Zx5_gj4EDtFKIS4k"/>
+<div class="absolute inset-0 bg-surface/40"></div>
+</div>
+<div class="relative z-10">
+<span class="font-label text-xs text-primary/50 group-hover:text-primary transition-colors">ZONE_04</span>
+<h3 class="font-headline text-2xl font-bold uppercase mt-2">Sanitary</h3>
+<div class="w-8 h-[1px] bg-primary mt-4 group-hover:w-24 transition-all duration-500"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Showcase: Material Integrity -->
+<section class="py-32 px-12 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline text-4xl font-bold uppercase tracking-tight">Material Palette</h2>
+<p class="font-body text-secondary mt-4 max-w-md">Our selection is curated for structural longevity and visual depth, sourced from sustainable forestries.</p>
+</div>
+<div class="font-label text-xs text-outline tracking-widest uppercase">
+                        Spec Sheet 001/M
+                    </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-1 bg-outline-variant/10 p-1">
+<!-- Material 1 -->
+<div class="md:col-span-8 bg-surface-container p-12 group cursor-pointer">
+<div class="flex items-start justify-between h-full">
+<div class="max-w-sm">
+<span class="font-label text-primary text-xs tracking-widest uppercase">S01 / Hardwood</span>
+<h4 class="font-headline text-3xl font-bold mt-4 mb-6">American Black Walnut</h4>
+<p class="text-zinc-400 font-body leading-relaxed">A premium selection for those seeking timeless elegance. Known for its rich, chocolate tones and architectural stability.</p>
+<div class="mt-12 flex gap-4">
+<div class="bg-surface-container-highest p-4 border-l-2 border-primary">
+<span class="block font-label text-[10px] text-zinc-500 uppercase">Oil Finish</span>
+<span class="block font-headline font-bold">Rubio Monocoat</span>
+</div>
+<div class="bg-surface-container-highest p-4 border-l-2 border-primary">
+<span class="block font-label text-[10px] text-zinc-500 uppercase">Origin</span>
+<span class="block font-headline font-bold">Appalachia</span>
+</div>
+</div>
+</div>
+<div class="w-64 h-80 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Macro texture of American Black Walnut wood grain with smooth satin oil finish and deep natural swirls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0weeQFQa5x8Vbgq9HpZUDAuI8ArvmcrNsgUxg0TURxLVFxXmoyw0xSqlEJnBquqUY0JrjvQk935VzMFfFT8TL-eBSOM_sIIPjWQsEW633cddMR6pIbtFoR4QkLC3PTct-pas5T6Jh6yAq4NTeE9O5OBaBLQ5VuR5nn-hf5TiYarpVoxMQpwjlTZ_BEoPCj2IiRPS0sil0YL7M2OPsV_v8HFhPY9BcamXgzltRW8l6n4zgCDovZa5NtfY7C7tFK7dqffDnWOl-eok"/>
+</div>
+</div>
+</div>
+<!-- Material 2 -->
+<div class="md:col-span-4 bg-surface-container-low p-12 flex flex-col justify-between group cursor-pointer overflow-hidden relative">
+<div class="relative z-10">
+<span class="font-label text-primary text-xs tracking-widest uppercase">S02 / Finish</span>
+<h4 class="font-headline text-3xl font-bold mt-4">Matte Lacquer</h4>
+</div>
+<div class="mt-8 relative z-10">
+<p class="text-zinc-500 font-body text-sm mb-6">Fingerprint resistant, soft-touch coatings for high-traffic zones.</p>
+<button class="flex items-center gap-2 font-label text-xs text-primary uppercase tracking-widest hover:gap-4 transition-all">
+                                View Samples <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<img class="absolute inset-0 w-full h-full object-cover opacity-10 group-hover:opacity-30 transition-opacity" data-alt="Smooth matte grey surface texture showing minimal light reflection and high-end velvety finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV_56DlUr3SmpcqMqxw8z7RWFJRqz4k_sZ8POeYZJF2P6BXfhFTElp7VTB_0WfPr9y2XdidyC73EkFQTEGrbJ4bneRCrclez0x57mOVqkBKccGa-k8JQG1A7Eae7yOye2eQk3-xNPrrWuNPshKiOiyWG62uiSpXhGvYWazTdrZDrTN3LZqHX67jCybPRynhw2fnk9OO42LUJjk-LaJEwEdPtLHFqPTO_-WgcJF-dRH_GdXTIHN0CRTmcGkROE6FcemGGqpF7F5FKY"/>
+</div>
+<!-- Material 3 -->
+<div class="md:col-span-4 bg-surface-container-high p-12 group cursor-pointer">
+<span class="font-label text-primary text-xs tracking-widest uppercase">S03 / Stone</span>
+<h4 class="font-headline text-2xl font-bold mt-4 mb-4 uppercase">Carrara Marble</h4>
+<div class="aspect-square bg-surface-container-highest overflow-hidden mb-6">
+<img class="w-full h-full object-cover" data-alt="Detailed view of white Carrara marble with elegant grey veining for premium countertop surfaces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr63_z94FN4icvPaH2B3lM_XV_7mELS9zSJDWcb6M-3AL8Hbi11LYA5M99PKJXQMeBZbRPRfG-ImlY5TH1lQGLWjeP7I_RMRybc1vPKSILjrPXjSO8ZaNVdBFZKOm1StZyeyxM-FujDK7buz0TIZ0PC2i0UWk1EkewvdZRBQEUGxp5NCq7qHqgVgCYt0bje52TdC5IRXLRlNy3gzmWNqNEn1mQAzQWV5-uXjFAsFE76tALibIwMP1m_RDTczMPRMvWo0rvo8uQn-E"/>
+</div>
+</div>
+<!-- Material 4 -->
+<div class="md:col-span-8 bg-surface p-12 border border-outline-variant/10">
+<div class="grid grid-cols-2 gap-12">
+<div>
+<span class="font-label text-primary text-xs tracking-widest uppercase">Engineering</span>
+<h4 class="font-headline text-3xl font-bold mt-4 mb-6">Precision Hinges</h4>
+<p class="text-zinc-500 text-sm leading-relaxed">We utilize Italian-engineered soft-close systems, tested for over 200,000 cycles, ensuring a lifetime of silent movement.</p>
+</div>
+<div class="flex items-center justify-center">
+<div class="w-full h-40 bg-surface-container-lowest flex items-center justify-center relative">
+<div class="absolute inset-0 blueprint-grid opacity-30"></div>
+<span class="material-symbols-outlined text-5xl text-primary/30">architecture</span>
+<span class="absolute bottom-2 right-2 font-label text-[10px] text-zinc-600">CAD_MODEL_H712</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process: Technical Audit -->
+<section class="py-32 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto px-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-24">
+<div class="relative">
+<div class="text-6xl font-headline font-bold text-primary/10 absolute -top-12 -left-4">01</div>
+<h5 class="font-headline text-xl font-bold uppercase mb-6 tracking-wide">Laser Site Audit</h5>
+<p class="text-zinc-400 font-body text-sm leading-relaxed">Every project begins with a sub-millimeter laser scan of your space, accounting for wall deviations and structural nuances that traditional measuring misses.</p>
+</div>
+<div class="relative">
+<div class="text-6xl font-headline font-bold text-primary/10 absolute -top-12 -left-4">02</div>
+<h5 class="font-headline text-xl font-bold uppercase mb-6 tracking-wide">Technical Blueprint</h5>
+<p class="text-zinc-400 font-body text-sm leading-relaxed">Our designers translate the scan into a comprehensive technical drawing, detailing every joint, reveal, and internal specification for your approval.</p>
+</div>
+<div class="relative">
+<div class="text-6xl font-headline font-bold text-primary/10 absolute -top-12 -left-4">03</div>
+<h5 class="font-headline text-xl font-bold uppercase mb-6 tracking-wide">CNC Fabrication</h5>
+<p class="text-zinc-400 font-body text-sm leading-relaxed">Files are sent directly to our workshop where CNC machines cut with robotic precision, before our master craftsmen hand-finish every edge.</p>
+</div>
+</div>
+</div>
+</section>
+
+</body></html>
