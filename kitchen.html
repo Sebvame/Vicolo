@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kitchen Portfolio | ARCH_STUDIO</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#e4beb2",
+                        "on-surface-variant": "#c4c7c7",
+                        "primary-fixed-dim": "#e8c086",
+                        "surface-variant": "#353535",
+                        "on-secondary-fixed": "#111d23",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary": "#432c00",
+                        "secondary": "#bcc8d0",
+                        "on-tertiary-fixed": "#2b160f",
+                        "outline-variant": "#444748",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#bcc8d0",
+                        "surface": "#131313",
+                        "on-tertiary-fixed-variant": "#5b4137",
+                        "on-tertiary-container": "#ae8c80",
+                        "surface-dim": "#131313",
+                        "outline": "#8e9192",
+                        "on-secondary-fixed-variant": "#3d484f",
+                        "primary-container": "#3e2800",
+                        "surface-bright": "#393939",
+                        "inverse-primary": "#775928",
+                        "surface-container": "#20201f",
+                        "background": "#131313",
+                        "surface-tint": "#e8c086",
+                        "on-surface": "#e5e2e1",
+                        "secondary-fixed": "#d8e4ec",
+                        "on-primary-fixed": "#281800",
+                        "primary-fixed": "#ffdeae",
+                        "tertiary": "#e4beb2",
+                        "tertiary-fixed": "#ffdbce",
+                        "on-primary-fixed-variant": "#5d4213",
+                        "secondary-container": "#3f4b51",
+                        "surface-container-highest": "#353535",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-container": "#aebac2",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary": "#263238",
+                        "on-error": "#690005",
+                        "on-background": "#e5e2e1",
+                        "on-primary-container": "#b18e58",
+                        "primary": "#e8c086",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#3e271e",
+                        "on-tertiary": "#422b22"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #131313; color: #e5e2e1; }
+        .blueprint-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #353535 1px, transparent 1px), linear-gradient(to bottom, #353535 1px, transparent 1px);
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-xl border-b border-[#353535] flex justify-between items-center px-8 h-16 w-full max-w-full cursor-crosshair">
+<div class="text-xl font-bold tracking-tighter text-[#e8c086] font-['Space_Grotesk'] uppercase">ARCH_STUDIO</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-[#e8c086] border-b border-[#e8c086] pb-1 transition-colors duration-300" href="#">GALLERY</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-[#b18e58] hover:text-[#e8c086] transition-colors duration-300" href="#">SPECS</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-[#b18e58] hover:text-[#e8c086] transition-colors duration-300" href="#">PROCESS</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-[#b18e58] hover:text-[#e8c086] transition-colors duration-300" href="#">ATELIER</a>
+</div>
+<button class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-[#e8c086] border border-[#e8c086] px-6 py-2 hover:bg-[#e8c086] hover:text-[#131313] transition-all duration-300">CONSULT</button>
+</nav>
+<!-- SideNavBar (Hidden on Mobile) -->
+<aside class="hidden md:flex fixed left-0 top-16 h-full w-20 border-r border-[#353535] bg-[#131313] flex-col items-center pt-10 z-40">
+<div class="flex flex-col items-center justify-center bg-[#20201f] text-[#e8c086] w-full py-6 border-l-2 border-[#e8c086] cursor-crosshair">
+<span class="material-symbols-outlined mb-1">square_foot</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">DIMENSIONS</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#353535] w-full py-6 hover:bg-[#20201f] hover:text-[#b18e58] transition-all cursor-crosshair">
+<span class="material-symbols-outlined mb-1">straighten</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">MATERIALS</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#353535] w-full py-6 hover:bg-[#20201f] hover:text-[#b18e58] transition-all cursor-crosshair">
+<span class="material-symbols-outlined mb-1">architecture</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">JOINERY</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#353535] w-full py-6 hover:bg-[#20201f] hover:text-[#b18e58] transition-all cursor-crosshair">
+<span class="material-symbols-outlined mb-1">format_paint</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">FINISH</span>
+</div>
+<div class="mt-auto mb-20 text-center opacity-40">
+<p class="font-['Space_Grotesk'] text-[8px] tracking-[0.3em] vertical-text rotate-180 uppercase">VER. 02.24</p>
+</div>
+</aside>
+<main class="md:pl-20 pt-16 min-h-screen relative bg-surface">
+<!-- Background Blueprint Texture -->
+<div class="absolute inset-0 blueprint-grid pointer-events-none"></div>
+<!-- Hero Title Section -->
+<header class="px-8 md:px-16 pt-20 pb-12 relative z-10">
+<div class="flex items-baseline gap-4 mb-2">
+<span class="text-primary font-label text-sm tracking-[0.3em]">PORTFOLIO_04</span>
+<div class="h-[1px] w-24 bg-primary/30"></div>
+</div>
+<h1 class="text-6xl md:text-8xl font-headline font-bold text-on-surface tracking-tighter leading-none mb-6">
+                KITCHEN <br/> <span class="text-primary">PRECISION</span>
+</h1>
+<p class="max-w-xl text-on-surface-variant font-body text-lg leading-relaxed">
+                Exploring the intersection of culinary ergonomics and architectural permanence. Our kitchen systems are built as monolithic inserts into the home's structure.
+            </p>
+</header>
+<!-- Drawer Layout Gallery -->
+<section class="flex flex-col md:flex-row w-full h-[600px] border-y border-[#353535] group">
+<!-- Project Drawer 01 -->
+<div class="flex-1 border-r border-[#353535] relative overflow-hidden transition-all duration-700 hover:flex-[3] group/drawer cursor-pointer bg-surface-container">
+<div class="absolute inset-0 bg-cover bg-center grayscale group-hover/drawer:grayscale-0 transition-all duration-700 opacity-60 group-hover/drawer:opacity-100" data-alt="ultra-modern minimalist kitchen with seamless dark walnut cabinetry and a massive white marble waterfall island, dramatic directional lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrVZaL0EG3fg-psOiseDVVLAnzUo236tVSuWf1-TD7jv3OQhHD37gU9L76T93PYG8AIx-7ro6Bqq9nZW0p1h_v4GjrKqrk087a5MVQ-CirB5nUHA6b8qxkW8RO_JK4vTsYj2_jkGJp4enS8Fr2QbxDHaznod7gnNredvhbdKyp4ppQgWxrBzWnFMZhWMSiRLolXea7dn-NVWpS3EePhrOgSEqyh6BBNwG8P8_JDglVYX--TbhFcYQKR7x0zXJFjNvY1vHFgjfY3ds')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute top-8 left-8">
+<span class="text-primary font-label text-[10px] tracking-[0.4em]">01_SLATE &amp; WALNUT</span>
+</div>
+<div class="absolute bottom-8 left-8 transition-transform duration-500 transform group-hover/drawer:translate-x-4">
+<h3 class="text-2xl font-headline font-bold text-white uppercase tracking-wider">The Monolith</h3>
+<div class="flex items-center gap-2 mt-2 opacity-0 group-hover/drawer:opacity-100 transition-opacity duration-700">
+<span class="text-primary font-label text-xs tracking-widest">VIEW SPECIFICATIONS</span>
+<span class="material-symbols-outlined text-primary text-sm">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<!-- Project Drawer 02 -->
+<div class="flex-1 border-r border-[#353535] relative overflow-hidden transition-all duration-700 hover:flex-[3] group/drawer cursor-pointer bg-surface-container">
+<div class="absolute inset-0 bg-cover bg-center grayscale group-hover/drawer:grayscale-0 transition-all duration-700 opacity-60 group-hover/drawer:opacity-100" data-alt="close up of premium kitchen joinery details showing perfectly flush cabinet doors and integrated handles in dark stained oakwood" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAR1OdWWHGVm6SX8-oxcTWPkgWjC4RsvOCvLMw3rTzKVq5I3BIwxBluCXi-fmx10GyUVu47sokuzLknh9qZ8tJKBmMEYXhuH3ZRz2QC4Oc30hDonxxO3SBnOJBM3zqOXLlWQHyWPOCHqv_ItA77LIJ4PquMpOw_NI_dxVPQNkff4ci5fF8qLEmAOU-FjeXat1mUUH_j-Xs-6GCvim_QfWWzwkvS0z-VfCEtMBGM2yQpzdU6tABRKAoLbvAuqSlcOvtnxNET_1QyAd0')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute top-8 left-8">
+<span class="text-primary font-label text-[10px] tracking-[0.4em]">02_BRUSHED STEEL</span>
+</div>
+<div class="absolute bottom-8 left-8 transition-transform duration-500 transform group-hover/drawer:translate-x-4">
+<h3 class="text-2xl font-headline font-bold text-white uppercase tracking-wider">Industrial Loft</h3>
+<div class="flex items-center gap-2 mt-2 opacity-0 group-hover/drawer:opacity-100 transition-opacity duration-700">
+<span class="text-primary font-label text-xs tracking-widest">VIEW SPECIFICATIONS</span>
+<span class="material-symbols-outlined text-primary text-sm">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<!-- Project Drawer 03 -->
+<div class="flex-1 border-r border-[#353535] relative overflow-hidden transition-all duration-700 hover:flex-[3] group/drawer cursor-pointer bg-surface-container">
+<div class="absolute inset-0 bg-cover bg-center grayscale group-hover/drawer:grayscale-0 transition-all duration-700 opacity-60 group-hover/drawer:opacity-100" data-alt="detail shot of a high-end natural stone countertop with intricate veining, featuring a custom integrated sink carved from the same stone" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCbmaB8oRAKYeYv-k1Y-9EysqKpQYNK4EOqes66b7nHHviG1Ncld3p_hP0SRofJJmKcIKc374rAZw-7A-z5RQRlmKTCBcyF6BH1aJp8ChzoQBuBdXui33Br4iwgZNUe2cZ_maF7VOhMps7F2tsNgLVRjriBUtGBQ8aimhniAVPCFBgVxSRjRcL9s_PtlFyLboqQ01dKV102uZJ01rDcWBMUDXQYNBTmJGxw-pBwWR2cVpLIQK9Xd_YIvTo3M4uXFKF9JH40rBTlWBE')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute top-8 left-8">
+<span class="text-primary font-label text-[10px] tracking-[0.4em]">03_CALACATTA GOLD</span>
+</div>
+<div class="absolute bottom-8 left-8 transition-transform duration-500 transform group-hover/drawer:translate-x-4">
+<h3 class="text-2xl font-headline font-bold text-white uppercase tracking-wider">Stone Integration</h3>
+<div class="flex items-center gap-2 mt-2 opacity-0 group-hover/drawer:opacity-100 transition-opacity duration-700">
+<span class="text-primary font-label text-xs tracking-widest">VIEW SPECIFICATIONS</span>
+<span class="material-symbols-outlined text-primary text-sm">arrow_right_alt</span>
+</div>
+</div>
+</div>
+<!-- Project Drawer 04 -->
+<div class="flex-1 relative overflow-hidden transition-all duration-700 hover:flex-[3] group/drawer cursor-pointer bg-surface-container">
+<div class="absolute inset-0 bg-cover bg-center grayscale group-hover/drawer:grayscale-0 transition-all duration-700 opacity-60 group-hover/drawer:opacity-100" data-alt="minimalist architectural kitchen with hidden pantry behind floor-to-ceiling white oak panels, soft natural morning light from large window" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0mv10ZJUnvrkVA_7XT4IkU7vLTPk_mXSch_RD9xt6Tvb2JiNeAc7q2RuOHwAzYr4BhmbLXs_inGM8ys8edebxCQYAJcJkvhpK1cBeAXIMnMbUnX-qTvWJldt-ROfAhAMg44ZuLgEJpWR-CbGEECe7ijj6dcjBiAYxZGbnBOxNP9TN6DWHI-8NBCa6DemeFGPYbF7D1KsE3-R_MKURlZa8Z1o_Vgela94pPi_ecucKLkrh54O0eA9KgKC74K_TWS6IPo4mB7copts')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute top-8 left-8">
+<span class="text-primary font-label text-[10px] tracking-[0.4em]">04_WHITE OAK</span>
+</div>
+<div class="absolute bottom-8 left-8 transition-transform duration-500 transform group-hover/drawer:translate-x-4">
+<h3 class="text-2xl font-headline font-bold text-white uppercase tracking-wider">The Pavilion</h3>
+<div class="flex items-center gap-2 mt-2 opacity-0 group-hover/drawer:opacity-100 transition-opacity duration-700">
+<span class="text-primary font-label text-xs tracking-widest">VIEW SPECIFICATIONS</span>
+<span class="material-symbols-outlined text-primary text-sm">arrow_right_alt</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specification Section -->
+<section class="grid grid-cols-1 md:grid-cols-3 w-full border-b border-[#353535]">
+<div class="p-12 border-r border-[#353535] bg-surface-container-low">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-1 h-6 bg-primary"></div>
+<h4 class="font-headline font-bold text-lg tracking-widest uppercase text-on-surface">JOINERY SPECS</h4>
+</div>
+<ul class="space-y-4">
+<li class="flex justify-between items-center border-b border-outline-variant/20 pb-2">
+<span class="font-label text-[10px] text-secondary tracking-widest uppercase">CONSTRUCTION</span>
+<span class="font-body text-sm text-on-surface">SOLID MORTISE &amp; TENON</span>
+</li>
+<li class="flex justify-between items-center border-b border-outline-variant/20 pb-2">
+<span class="font-label text-[10px] text-secondary tracking-widest uppercase">TOLERANCE</span>
+<span class="font-body text-sm text-on-surface">+/- 0.5MM PRECISION</span>
+</li>
+<li class="flex justify-between items-center border-b border-outline-variant/20 pb-2">
+<span class="font-label text-[10px] text-secondary tracking-widest uppercase">HARDWARE</span>
+<span class="font-body text-sm text-on-surface">INTEGRATED HIDDEN BLUM</span>
+</li>
+</ul>
+</div>
+<div class="p-12 border-r border-[#353535] bg-surface-container">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-1 h-6 bg-primary"></div>
+<h4 class="font-headline font-bold text-lg tracking-widest uppercase text-on-surface">SURFACE MATRIX</h4>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-highest p-4 border border-outline-variant/30 group hover:border-primary transition-colors">
+<p class="font-label text-[9px] text-primary tracking-tighter mb-2">SPECIES_01</p>
+<p class="font-body text-sm font-bold text-on-surface">FUMED OAK</p>
+</div>
+<div class="bg-surface-container-highest p-4 border border-outline-variant/30 group hover:border-primary transition-colors">
+<p class="font-label text-[9px] text-primary tracking-tighter mb-2">STONE_04</p>
+<p class="font-body text-sm font-bold text-on-surface">PINA_GRIGIO</p>
+</div>
+</div>
+</div>
+<div class="p-12 bg-surface-container-low flex flex-col justify-center">
+<p class="font-body text-sm italic text-on-surface-variant leading-relaxed mb-6">
+                    "A kitchen should not feel like an appliance garage. It should feel like a piece of monumental furniture that anchors the entire living space."
+                </p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-[#353535] flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">architecture</span>
+</div>
+<div>
+<p class="font-headline font-bold text-xs tracking-widest">MARCUS VAUGHN</p>
+<p class="font-label text-[9px] text-secondary tracking-widest">PRINCIPAL ARCHITECT</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action Section -->
+<section class="py-32 px-8 text-center relative overflow-hidden">
+<div class="absolute inset-0 blueprint-grid opacity-5"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="text-4xl font-headline font-bold mb-8 tracking-tighter text-on-surface">READY TO DESIGN YOUR <span class="text-primary">CULINARY ANCHOR</span>?</h2>
+<div class="flex flex-col md:flex-row gap-4 justify-center">
+<button class="bg-primary text-on-primary px-10 py-4 font-label font-bold text-sm tracking-[0.2em] hover:bg-primary-fixed-dim transition-colors">DOWNLOAD BROCHURE</button>
+<button class="border border-outline text-primary px-10 py-4 font-label font-bold text-sm tracking-[0.2em] hover:bg-surface-container transition-colors">REQUEST BLUEPRINT</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="relative w-full border-t border-[#353535] mt-auto bg-[#131313] flex flex-col md:flex-row justify-between items-center px-12 py-8 w-full transition-opacity duration-500">
+<div class="text-[#e8c086] font-bold font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase mb-4 md:mb-0">
+            ©2024 ARCH_STUDIO PRECISION JOINERY. ALL RIGHTS RESERVED.
+        </div>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-[#353535] hover:text-[#e8c086] transition-colors" href="#">CERTIFICATIONS</a>
+<a class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-[#353535] hover:text-[#e8c086] transition-colors" href="#">WARRANTY</a>
+<a class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-[#353535] hover:text-[#e8c086] transition-colors" href="#">SUSTAINABILITY</a>
+<a class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-[#353535] hover:text-[#e8c086] transition-colors" href="#">LEGAL</a>
+</div>
+</footer>
+</body></html>
