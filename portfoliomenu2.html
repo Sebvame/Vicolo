@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ARCH_STUDIO | Blueprint Navigation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#e4beb2",
+                        "on-surface-variant": "#c4c7c7",
+                        "primary-fixed-dim": "#e8c086",
+                        "surface-variant": "#353535",
+                        "on-secondary-fixed": "#111d23",
+                        "inverse-on-surface": "#313030",
+                        "surface-container-low": "#1c1b1b",
+                        "on-primary": "#432c00",
+                        "secondary": "#bcc8d0",
+                        "on-tertiary-fixed": "#2b160f",
+                        "outline-variant": "#444748",
+                        "error": "#ffb4ab",
+                        "secondary-fixed-dim": "#bcc8d0",
+                        "surface": "#131313",
+                        "on-tertiary-fixed-variant": "#5b4137",
+                        "on-tertiary-container": "#ae8c80",
+                        "surface-dim": "#131313",
+                        "outline": "#8e9192",
+                        "on-secondary-fixed-variant": "#3d484f",
+                        "primary-container": "#3e2800",
+                        "surface-bright": "#393939",
+                        "inverse-primary": "#775928",
+                        "surface-container": "#20201f",
+                        "background": "#131313",
+                        "surface-tint": "#e8c086",
+                        "on-surface": "#e5e2e1",
+                        "secondary-fixed": "#d8e4ec",
+                        "on-primary-fixed": "#281800",
+                        "primary-fixed": "#ffdeae",
+                        "tertiary": "#e4beb2",
+                        "tertiary-fixed": "#ffdbce",
+                        "on-primary-fixed-variant": "#5d4213",
+                        "secondary-container": "#3f4b51",
+                        "surface-container-highest": "#353535",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-container": "#aebac2",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#e5e2e1",
+                        "on-secondary": "#263238",
+                        "on-error": "#690005",
+                        "on-background": "#e5e2e1",
+                        "on-primary-container": "#b18e58",
+                        "primary": "#e8c086",
+                        "surface-container-high": "#2a2a2a",
+                        "error-container": "#93000a",
+                        "tertiary-container": "#3e271e",
+                        "on-tertiary": "#422b22"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, #353535 1px, transparent 1px),
+                linear-gradient(to bottom, #353535 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .room-hotspot:hover .peek-card {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #e8c086;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#131313]/90 backdrop-blur-xl border-b border-[#353535] flex justify-between items-center px-8 h-16 w-full max-w-full cursor-crosshair">
+<div class="text-xl font-bold tracking-tighter text-[#e8c086] font-['Space_Grotesk']">ARCH_STUDIO</div>
+<div class="hidden md:flex gap-12">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-[#e8c086] border-b border-[#e8c086] pb-1 transition-colors duration-300" href="#">GALLERY</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-[#b18e58] hover:text-[#e8c086] transition-colors duration-300" href="#">SPECS</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-[#b18e58] hover:text-[#e8c086] transition-colors duration-300" href="#">PROCESS</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-[#b18e58] hover:text-[#e8c086] transition-colors duration-300" href="#">ATELIER</a>
+</div>
+<button class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-xs text-[#e8c086] border border-[#e8c086] px-6 py-2 hover:bg-[#e8c086] hover:text-[#131313] transition-all duration-300">
+            CONSULT
+        </button>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-full w-20 border-r border-[#353535] bg-[#131313] z-40 hidden md:flex flex-col items-center pt-10">
+<div class="flex flex-col items-center justify-center bg-[#20201f] text-[#e8c086] w-full py-6 border-l-2 border-[#e8c086] transition-all ease-in-out cursor-crosshair">
+<span class="material-symbols-outlined mb-2" data-icon="square_foot">square_foot</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">DIMENSIONS</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#353535] w-full py-6 hover:bg-[#20201f] hover:text-[#b18e58] transition-all ease-in-out cursor-crosshair">
+<span class="material-symbols-outlined mb-2" data-icon="straighten">straighten</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">MATERIALS</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#353535] w-full py-6 hover:bg-[#20201f] hover:text-[#b18e58] transition-all ease-in-out cursor-crosshair">
+<span class="material-symbols-outlined mb-2" data-icon="architecture">architecture</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">JOINERY</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#353535] w-full py-6 hover:bg-[#20201f] hover:text-[#b18e58] transition-all ease-in-out cursor-crosshair">
+<span class="material-symbols-outlined mb-2" data-icon="format_paint">format_paint</span>
+<span class="font-['Space_Grotesk'] text-[10px] tracking-widest uppercase">FINISH</span>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="pl-0 md:pl-20 pt-16 min-h-screen relative overflow-hidden flex flex-col">
+<!-- Blueprint Background Interface -->
+<section class="flex-grow blueprint-grid relative flex items-center justify-center p-8 md:p-20">
+<!-- Technical Labels / Annotations Layer -->
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<div class="absolute top-10 left-32 font-label text-[10px] text-outline tracking-widest">PROJECT_REF: V.02.24_RESIDENTIAL</div>
+<div class="absolute bottom-10 right-10 font-label text-[10px] text-outline tracking-widest">SCALE: 1:50 @ A1</div>
+<div class="absolute top-1/2 left-4 w-40 h-[1px] bg-outline-variant rotate-90"></div>
+<div class="absolute top-1/2 -left-16 font-label text-[9px] text-primary rotate-90 tracking-[0.3em]">NORTH_ELEVATION</div>
+</div>
+<!-- The House Blueprint (Structural SVG / HTML Hybrid) -->
+<div class="relative w-full max-w-5xl aspect-[16/10] border-2 border-outline-variant bg-surface/80 p-1 flex">
+<!-- Room 1: Living Room (Large Left Area) -->
+<div class="room-hotspot relative w-3/5 border border-outline-variant h-full group hover:bg-primary/5 transition-colors duration-500 cursor-pointer">
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline text-2xl font-light tracking-[0.2em] text-on-surface-variant group-hover:text-primary transition-colors">LIVING_AREA</span>
+<span class="font-label text-[10px] text-outline mt-2 tracking-widest">42.5 SQM</span>
+</div>
+<!-- Peek Card -->
+<div class="peek-card absolute -top-24 left-1/2 -translate-x-1/2 w-64 opacity-0 transform translate-y-4 transition-all duration-500 pointer-events-none z-30">
+<div class="bg-surface-container border border-primary p-4">
+<img class="w-full h-32 object-cover mb-4" data-alt="minimalist modern living room with oak wood paneling, floor to ceiling windows, and structural concrete pillars in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFgSLlIWkClq5QCS5rab4z0zkFC7gacdMRLHdG7oyhLmJIxWtx7ACOQIyCCD7qzomLGz1n64QCf75AzPJS0S4dCHtaeCL11WHbk3OOgaq5uuBCQP3Ax4LmDyk0YM3dXEITR_ss4VSzhsIZfMJ9dqiQ7_5dQvf4ero5MKXzCgTjwT3QMShVH5HegfhXoCVIUHHOH1eJ-i1z0gK6AxbPf7sNrkpEre72mSYe-WfJuOI3xvcsf6WeR6Oi7YWRTZI1IewYgvi5GVLZtkc"/>
+<p class="font-label text-[10px] text-primary tracking-widest uppercase mb-1">Portfolio: Social Core</p>
+<p class="font-body text-xs text-on-surface-variant leading-relaxed">Hand-finished walnut joinery with integrated acoustic baffling.</p>
+</div>
+</div>
+</div>
+<div class="w-2/5 flex flex-col">
+<!-- Room 2: Kitchen (Top Right) -->
+<div class="room-hotspot relative h-1/2 border border-outline-variant group hover:bg-primary/5 transition-colors duration-500 cursor-pointer">
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline text-xl font-light tracking-[0.2em] text-on-surface-variant group-hover:text-primary transition-colors">KITCHEN</span>
+<span class="font-label text-[10px] text-outline mt-2 tracking-widest">18.2 SQM</span>
+</div>
+<!-- Peek Card -->
+<div class="peek-card absolute -right-72 top-10 w-64 opacity-0 transform translate-y-4 transition-all duration-500 pointer-events-none z-30">
+<div class="bg-surface-container border border-primary p-4">
+<img class="w-full h-32 object-cover mb-4" data-alt="high end architectural kitchen with seamless black cabinetry, marble island, and precision brass hardware details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-d1ampttRH2XtOV9gkO29Rdc0xWgtN2iqgL64iTtiy041tuNYAvYlsIVj2jotFirOH00vrjWC8CrkV7kZtsFXG8wDgCVGdVpH4q195qFr5y3Z3J2FBCC4pTvsug1SyzDlUZgJEjT0oGzfnxq-dOUCdVna6SfJm-zeP9kAzrz5DsRgv_T97PBvUN7ndxpGGj7AZ6kzMFQGYky35KYnAEVOZ8lPWhoMxsQ9PqQiQEOLUDcxKkyDWZZeOieAXKpVxGZF-lHt5vwCetA"/>
+<p class="font-label text-[10px] text-primary tracking-widest uppercase mb-1">Portfolio: Culinary Lab</p>
+<p class="font-body text-xs text-on-surface-variant leading-relaxed">Hidden pantries and mitred stone edges for seamless transition.</p>
+</div>
+</div>
+</div>
+<div class="h-1/2 flex">
+<!-- Room 3: Bathroom (Small) -->
+<div class="room-hotspot relative w-1/3 border border-outline-variant group hover:bg-primary/5 transition-colors duration-500 cursor-pointer">
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary" data-icon="wash">wash</span>
+<span class="font-label text-[8px] text-outline mt-1 uppercase tracking-widest">BATH</span>
+</div>
+<!-- Peek Card -->
+<div class="peek-card absolute -bottom-40 left-0 w-56 opacity-0 transform translate-y-4 transition-all duration-500 pointer-events-none z-30">
+<div class="bg-surface-container border border-primary p-4">
+<img class="w-full h-24 object-cover mb-4" data-alt="monolithic stone bathroom with recessed lighting and floating timber vanity, Japanese minimalism style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAttDriJrfUFoRALiAHvCLoSkk5kbbjWG3JKT-36MpdSt7iDpaWmAh7a6GVDC0AbAIz8ImQZZWIJqY9NqsllF5aU0LhtQItjb0OLEyzNN011emiPtqXxvtV9N_gZu3JrRBYXluep5nDkSDxcBX8Ya38NuKxgKyR9bFY_Vg0bvP8ABZchFRZJsYnxvtjz72pDPrtPmVrd3Mv9btklsFLeVNJmNcwDYe6bZt-qhTBLorfZpvlLqZpOWsN3EKrzymuAY8x0Ev5pwyrlPw"/>
+<p class="font-label text-[10px] text-primary tracking-widest uppercase">Wetroom Specs</p>
+</div>
+</div>
+</div>
+<!-- Room 4: Bedroom (Bottom Right) -->
+<div class="room-hotspot relative w-2/3 border border-outline-variant group hover:bg-primary/5 transition-colors duration-500 cursor-pointer">
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline text-lg font-light tracking-[0.2em] text-on-surface-variant group-hover:text-primary transition-colors">BEDROOM</span>
+<span class="font-label text-[10px] text-outline mt-2 tracking-widest">24.0 SQM</span>
+</div>
+<!-- Peek Card -->
+<div class="peek-card absolute -bottom-56 right-0 w-64 opacity-0 transform translate-y-4 transition-all duration-500 pointer-events-none z-30">
+<div class="bg-surface-container border border-primary p-4">
+<img class="w-full h-32 object-cover mb-4" data-alt="serene master bedroom with custom white oak wardrobe wall and floor to ceiling linen curtains in neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2RnVqoTHB4y8r6Eb3FrXmf4HJvXNFqN8pKsmPRuHiaD98o4C5L0CnUbv7dy2PMN_pTJSTtUgVWcivyFQYM-6S4SFY3g3QY7lY6_o2b5U4Pc2lNXLTx7y-YN_M7WXp3s1S_oVIt-4foo8UeJv_7hTKNSlPVznAxdTVTBeziF75JEYIu0fTIyIh6AKgKVypeAbvVSiEFOGui4Ub0oBRgo0kmy-_GWSd8yS28SZ-0KptuoCbnGTRzJk-CdCoxupEyA7G5i4sqTbBaLY"/>
+<p class="font-label text-[10px] text-primary tracking-widest uppercase mb-1">Portfolio: Sanctuary</p>
+<p class="font-body text-xs text-on-surface-variant leading-relaxed">Built-in millwork with invisible touch-to-open mechanisms.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Architectural Details: Doors / Swings (Decorative SVG Overlay) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" fill="none" viewbox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+<!-- Living Room Door -->
+<path d="M600 280 C 600 320, 560 350, 540 350" stroke="#e8c086" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<!-- Kitchen Door -->
+<path d="M600 150 C 640 150, 670 180, 670 200" stroke="#e8c086" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<!-- Bedroom Door -->
+<path d="M733 300 C 733 340, 773 370, 793 370" stroke="#e8c086" stroke-dasharray="4 4" stroke-width="1.5"></path>
+</svg>
+</div>
+<!-- Floating Sidebar Detail -->
+<div class="absolute right-12 top-1/2 -translate-y-1/2 flex flex-col gap-6">
+<div class="bg-surface-container-highest p-4 w-48 border-l-2 border-primary">
+<p class="font-label text-[9px] text-primary tracking-[0.2em] mb-2 uppercase">Current Selection</p>
+<p class="font-headline text-lg text-on-surface font-light uppercase tracking-widest">MASTER_PLAN</p>
+<div class="mt-4 pt-4 border-t border-outline-variant/30">
+<p class="font-body text-[11px] text-on-surface-variant leading-tight">Select a zone to explore joinery details, material schedules, and spatial cinematography.</p>
+</div>
+</div>
+<div class="bg-surface-container border border-outline-variant/20 p-4 w-48 flex items-center gap-4 group cursor-pointer hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="play_circle">play_circle</span>
+<span class="font-label text-[10px] tracking-widest uppercase">RE-ANIMATE PLAN</span>
+</div>
+</div>
+</section>
+<!-- Dynamic Spec Box (Bottom Interface) -->
+<section class="h-32 bg-surface-container-lowest border-t border-[#353535] flex items-center px-12 gap-20 overflow-x-auto custom-scrollbar">
+<div class="flex-shrink-0">
+<p class="font-label text-[9px] text-outline tracking-[0.2em] mb-1">FOUNDATION</p>
+<p class="font-body text-sm font-medium">REINFORCED INSULATED SLAB</p>
+</div>
+<div class="flex-shrink-0">
+<p class="font-label text-[9px] text-outline tracking-[0.2em] mb-1">CLADDING</p>
+<p class="font-body text-sm font-medium">CHARRED CEDAR (SHOU SUGI BAN)</p>
+</div>
+<div class="flex-shrink-0">
+<p class="font-label text-[9px] text-outline tracking-[0.2em] mb-1">GLAZING</p>
+<p class="font-body text-sm font-medium">TRIPLE GLAZED LOW-E THERMAL</p>
+</div>
+<div class="flex-shrink-0">
+<p class="font-label text-[9px] text-outline tracking-[0.2em] mb-1">HVAC</p>
+<p class="font-body text-sm font-medium">GEOTHERMAL RADIANT LOOP</p>
+</div>
+<div class="ml-auto flex items-center gap-8">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 bg-[#e8c086] border border-surface flex items-center justify-center text-[#131313] font-bold text-xs">OAK</div>
+<div class="w-10 h-10 bg-[#353535] border border-surface flex items-center justify-center text-primary font-bold text-xs">STL</div>
+<div class="w-10 h-10 bg-[#b18e58] border border-surface flex items-center justify-center text-[#131313] font-bold text-xs">BRS</div>
+</div>
+<button class="bg-primary text-on-primary px-8 py-3 font-label text-xs font-bold tracking-[0.2em] hover:bg-primary-fixed-dim transition-colors">DOWNLOAD SPECS</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#131313] relative w-full border-t border-[#353535] mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-8 w-full transition-opacity duration-500">
+<div class="text-[#e8c086] font-bold font-['Space_Grotesk'] text-[10px] tracking-widest">
+                    ©2024 ARCH_STUDIO PRECISION JOINERY. ALL RIGHTS RESERVED.
+                </div>
+<div class="flex gap-8 mt-4 md:mt-0">
+<a class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-[#353535] hover:text-[#e8c086] transition-colors" href="#">CERTIFICATIONS</a>
+<a class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-[#353535] hover:text-[#e8c086] transition-colors" href="#">WARRANTY</a>
+<a class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-[#353535] hover:text-[#e8c086] transition-colors" href="#">SUSTAINABILITY</a>
+<a class="font-['Space_Grotesk'] text-[9px] tracking-[0.2em] uppercase text-[#353535] hover:text-[#e8c086] transition-colors" href="#">LEGAL</a>
+</div>
+</div>
+</footer>
+</main>
+<!-- Moving Parts Panel (Hidden Overlay) -->
+<!-- This represents the 'sliding panel' mentioned in the prompt, conceptually ready to be triggered -->
+<div class="fixed top-0 right-0 w-full md:w-1/2 h-full bg-surface-container translate-x-full z-[60] transition-transform duration-700 ease-in-out border-l border-primary/20" id="gallery-panel">
+<div class="h-16 flex items-center justify-between px-8 border-b border-outline-variant">
+<span class="font-headline tracking-widest uppercase text-sm">Room_Detail: V01</span>
+<button class="material-symbols-outlined text-primary hover:rotate-90 transition-transform" data-icon="close">close</button>
+</div>
+<div class="p-12 overflow-y-auto h-[calc(100%-64px)] custom-scrollbar">
+<!-- Content for specific room portfolio would slide in here -->
+</div>
+</div>
+</body></html>
